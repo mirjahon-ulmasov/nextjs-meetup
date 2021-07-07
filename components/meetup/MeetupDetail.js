@@ -1,17 +1,17 @@
-import { useRouter } from "next/router";
-import Image from "next/image";
-import classes from "./MeetupDetail.module.css";
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import classes from './MeetupDetail.module.css';
 
-const MeetupDetail = (props) => {
+const MeetupDetail = props => {
   const router = useRouter();
 
   const goBackHandler = () => {
-    router.push("/");
+    router.push('/');
   };
 
   return (
     <section className={classes.detail}>
-      <img src={props.image} alt={props.title} layout="fill" />
+      <Image src={props.image} alt={props.title} width="1200" height="630" />
       <h2>{props.title}</h2>
       <address>{props.address}</address>
       <p>{props.description}</p>

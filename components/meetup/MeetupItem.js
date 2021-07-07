@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import classes from "./MeetupItem.module.css";
+import classes from './MeetupItem.module.css';
 
-const MeetupItem = (props) => {
+const MeetupItem = props => {
   const router = useRouter();
 
   const showDetailHandler = () => {
@@ -13,7 +13,7 @@ const MeetupItem = (props) => {
   return (
     <div className={classes.meetup}>
       <div className={classes.image}>
-        <img src={props.img} alt={props.title} layout="fill" />
+        <Image src={props.img} alt={props.title} width="1200" height="630" />
       </div>
       <div className={classes.info}>
         <h2>{props.title}</h2>
